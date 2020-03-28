@@ -1,0 +1,47 @@
+from random import choice
+import emoji
+from time import sleep
+print('=' * 20)
+print('      \033[1;33mJOKENPÔ!\033[m      ')
+print('=' * 20)
+print(emoji.emojize('''\033[1;33m
+[ 1 ] Pedra :facepunch:
+[ 2 ] Papel :raised_hand:
+[ 3 ] Tesoura :scissors:
+\033[mEscolha a sua opção e tente a sorte contra mim! haha''', use_aliases=True))
+lista = (['Pedra', 'Papel', 'Tesoura'])
+while True:
+    jogador = str(input('Digite de 1 a 3 qual opção você escolheu: ')).replace('1', 'Pedra').replace('2',
+                                                                                                     'Papel').replace(
+        '3', 'Tesoura')
+    if jogador == 'Pedra' or jogador == 'Papel' or jogador == 'Tesoura':
+        break
+    else:
+        print('\033[1;31mResposta inválida.\033[m responda com 1, 2 ou 3.')
+print('JO')
+sleep(0.5)
+print('KEN')
+sleep(0.5)
+print('PÔ!')
+sleep(0.5)
+print('=-'*41)
+pc = choice(['Pedra', 'Papel', 'Tesoura'])
+# Empate
+if jogador == pc:
+    print( f'Deu empate! Eu escolhi \033[1;33m{pc}\033[m e você escolheu \033[1;33m{jogador}\033[m! vitória para os dois lados!')
+# Vitórias
+elif jogador == 'Pedra' and pc == 'Tesoura':
+    print(f'Você venceu! Eu escolhi \033[1;31m{pc}\033[m e você escolheu \033[1;33m{jogador}\033[m, essa foi por pouco!')
+elif jogador == 'Tesoura' and pc == 'Papel':
+    print(f'Você ganhou! Eu escolhi \033[1;31m{pc}\033[m e você escolheu \033[1;33m{jogador}\033[m! você é demais!')
+elif jogador == 'Papel' and pc == 'Pedra':
+    print(f'Você ganhou! Eu escolhi \033[1;31m{pc}\033[m e você escolheu \033[1;33m{jogador}\033[m! quanta sorte!')
+# Derrotas
+elif jogador == 'Pedra' and pc == 'Papel':
+    print(f'Você perdeu! eu escolhi \033[1;33m{pc}\033[m e você escolheu \033[1;31m{jogador}\033[m, que sorte a minha haha!')
+elif jogador == 'Tesoura' and pc == 'Pedra':
+    print(f'Você perdeu! eu escolhi \033[1;33m{pc}\033[m e você escolheu \033[1;31m{jogador}\033[m, eu sou o melhor nesse jogo!')
+elif jogador == 'Papel' and pc == 'Tesoura':
+    print(f'Você perdeu! eu escolhi \033[1;33m{pc}\033[m e você escolheu \033[1;31m{jogador}\033[m, eu sou bom mesmo nesse jogo!')
+print('=-'*41)
+print('Tente novamente para obter diferentes resultados.')

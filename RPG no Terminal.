@@ -1,0 +1,84 @@
+from time import sleep
+from random import randint
+
+print('Bem vindo ao rpg em python, cada escolha irá afetar o jogo. \nVamos começar!')
+sleep(3)
+print('Você entrou no mundo de rpg, onde existe classes e diversas armas,\n'
+      'seu objetivo é sobreviver e chegar até o final vivo.')
+sleep(5)
+print('=-'*40)
+print('''Está na hora de escolher a sua classe, pense bem, essa escolha não terá volta.
+[ 1 ] Guerreiro - Um lutador que utiliza espadas, machados, escudos; Ele possui muita força bruta.
+[ 2 ] Mago - Um feiticeiro que usa da sua inteligencia para batalhar, possuí diversas magias.
+[ 3 ] Arqueiro - Uma humana com muita destreza, utiliza arco e flecha e pode obter flechas envenenadas!''')
+print('=-'*40)
+sleep(5)
+while True:
+      classe = int(input('Escolha de 1 a 3 qual classe deseja ser: '))
+      if classe == 1 or classe == 2 or classe == 3:
+            break
+      else:
+            print('\033[1;31mRESPOSTA INVÁLIDA!\033[m (tente responder, 1, 2 ou 3.)')
+
+if classe == 1:
+      print('Você é um \033[1;31mGuerreiro\033[m.')
+if classe == 2:
+      print('Você é um \033[1;33mMago\033[m.')
+if classe == 3:
+      print('Você é um \033[1;32mArqueiro\033[m.')
+sleep(1)
+print('Você começa em uma vila, onde tem players de diversas classes,\n'
+      'mas agora você não poderá fazer um grupo, você é um \033[1;31mjogador solo\033[m.')
+sleep(3)
+print('Chegou a hora! qual arma você prefere?')
+while True:
+      if classe == 1:
+            print('''[ 1 ] Espada e escudo. (pouco dano, mais chance de defesa.)
+[ 2 ] Dois machados. (muito dano e pouca defesa.)
+[ 3 ] Duas espadas (muito dano e pouca defesa.).''')
+            arma = int(input('Escolha a sua arma: '))
+            if arma == 1:
+                  print('Você tem em suas mãos uma\033[1;33m Espada e um resistente Escudo\033[m.')
+                  break
+            elif arma == 2:
+                  print('Você tem em suas mãos \033[1;33mDois Machados\033[m.')
+                  break
+            elif arma == 3:
+                  print('Você tem em suas mãos \033[1;33mDuas Espadas\033[m.')
+                  break
+            elif arma != 1 and arma != 2 and arma != 3:
+                  print('\033[1;31mRESPOSTA INVÁLIDA!\033[m (tente responder, 1, 2 ou 3.)')
+      elif classe == 2:
+            print('''[ 1 ] Cajado de fogo. (Dano alto e queimaduras por turno.)
+[ 2 ] Cajado de gelo (Dano médio e forte enraizamento.)
+[ 3 ] Cajado de planta (Medicinal e fraco enraizamento.)''')
+            arma = int(input('Escolha uma arma: '))
+            if arma == 1:
+                  print('Você tem em suas mãos um \033[1;31mCajado de Fogo\033[m.')
+                  break
+            elif arma == 2:
+                  print('Você tem em suas mãos um \033[1;36mCajado de Gelo\033[m.')
+                  break
+            elif arma == 3:
+                  print('Você tem em suas mãos um \033[1;32mCajado de Planta\033[m.')
+                  break
+            else:
+                  print('\033[1;31mRESPOSTA INVÁLIDA!\033[m (tente responder, 1, 2 ou 3.)')
+
+      else:
+            print('''[ 1 ] Arco e flecha de madeira  e uma adaga. (Adaga para defesa)
+[ 2 ] Crossbow (Consegue dar dois tiros em um turno, com dano reduzido.)
+[ 3 ] Arco e flecha de ferro. (Muito dano)''')
+            arma = int(input('Escolha uma arma: '))
+            if arma == 1:
+                  print('Você tem em suas mãos um \033[1;33mArco e Flecha e uma Adaga para defesa.')
+                  break
+            elif arma == 2:
+                  print('Você tem em suas mãos um \033[1;33mCrossbow\033[m.')
+                  break
+            elif arma == 3:
+                  print('Você tem em suas mãos um \033[1;33mArco e Flecha de Ferro\033[m, quanto dano!')
+                  break
+            else:
+                  print('\033[1;31mRESPOSTA INVÁLIDA!\033[m (tente responder, 1, 2 ou 3.)')
+#Feito por Bruno de Araujo de Jesus, 06/04/2020 horário: 01:26 da manhã, projeto em andamento.
